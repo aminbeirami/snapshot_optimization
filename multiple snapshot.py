@@ -56,3 +56,6 @@ cost_table = np.zeros((SNAPSHOT_NO+1,QUERY_SIZE+1))
 init_cost_table(SNAPSHOT_NO,QUERY_SIZE)
 make_sections(query_list,SNAPSHOT_NO,QUERY_SIZE)
 print cost_table
+
+for i in range(1,SNAPSHOT_NO+1):
+    print "when there is/are "+ str(i)+" snapshots, the minimum possible cost is: "+str(cost_table[i][QUERY_SIZE])
