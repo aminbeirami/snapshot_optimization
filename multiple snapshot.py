@@ -25,9 +25,12 @@ def calc_cost(Q,snap_no,cut):
         if cost_table[snap_no][cut] > -1: #if the cost was calculated before, don't calculate it again
             return cost_table[snap_no][cut]
         else:
-            queries = Q[cut:]
-            med = np.median(queries)
-            return calc_single_cost(queries,med)
+            if cut == 0:
+                return 0
+            else:
+                queries = Q[cut:]
+                med = np.median(queries)
+                return calc_single_cost(queries,med)
 
 def init_cost_table(no_snap,size_queries):
     init_val = -1
