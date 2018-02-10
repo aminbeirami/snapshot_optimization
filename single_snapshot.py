@@ -35,7 +35,6 @@ def plot_queries(Q):
     pyplot.plot(Q, np.zeros(Q.shape), '*')
     pyplot.savefig('Q.png')
 
-
 #
 # Plot cost for |S| = 1
 #
@@ -47,7 +46,6 @@ def plot_k1(Q):
     pyplot.plot(Q, np.zeros(Q.shape), '*')
     pyplot.plot(ts, cost, '--')
     pyplot.savefig('K1.png')
-
 
 #
 # Plot cost for adding one more s
