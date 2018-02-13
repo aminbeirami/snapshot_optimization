@@ -102,7 +102,7 @@ def plot_overall_cost():
 	pl.xticks(x, names)
 	pl.xlabel('slicing method')
 	pl.ylabel('overall cost')
-	pl.savefig("graphs/cuts_cost.png")
+	pl.savefig("graphs/cuts_cost.png",bbox_inches='tight')
 
 def plot_individual_cost():
 	cost_list = overall("individual")
@@ -114,7 +114,7 @@ def plot_individual_cost():
 	pl.xticks(x, names)
 	pl.xlabel('numbre of snapshots')
 	pl.ylabel('overall cost')
-	pl.savefig("graphs/snap_cost.png")
+	pl.savefig("graphs/snap_cost.png",bbox_inches='tight')
 
 
 def plot_single_cost():
